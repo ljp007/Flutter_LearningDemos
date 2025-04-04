@@ -42,7 +42,7 @@ class JKUserProfilePageState extends State<JKUserProfilePage> implements JKUserD
     return Scaffold(
       appBar: AppBar(title: Text('User Profile')),
       body: Center(
-        child: _userData == null
+        child: _userData.isEmpty
             ? CircularProgressIndicator()
             : ListView.builder(
               itemCount: _userData.length,
